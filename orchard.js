@@ -53,6 +53,16 @@ const pinkPrice = .55
 
 
 
+// 7 is nubmer of days but the indexes in arrays start with 0 , so i is strictly less than 7. I used an addition assignment operator (+=) to reasssing the value of totalAres to the sum of the i indexes every loop.
+
+let totalAcres = 0
+
+for (let i = 0; i < 7; i++) {
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i]
+}
+
+console.log (`Total Acres: `+ totalAcres)
+
 
 
 // PROBLEM 2
@@ -71,6 +81,12 @@ const pinkPrice = .55
 
 
 
+
+// That was a pretty easy one, I'm not sure what to comment. The average formula is m = sum of terms/number of terms. So I diveded totalAcres by 7 days of the week, that's our daily average.
+
+averageDailyAcres = totalAcres / 7
+
+console.log (`Average Daily Acres: `+ averageDailyAcres)
 
 
 // PROBLEM 3
@@ -108,6 +124,17 @@ let days = 0
 // CODE HERE
 
 
+// while loop is because I don't know how many times the loop runs. The instructions explaing pretty well what the loop should do, so as long as we have the acres left we work. even when it's just 3 acres for the last day instead of 9. Every loop 9 is substracted from the acresLeft and goes down to 0. And every loop we add 1 day to the total of days. Btw I commented out a console.log of every loop. Just wanted to see how it runs every time.
+
+
+
+while (acresLeft > 0) {
+   acresLeft = acresLeft - averageDailyAcres
+    days++
+    // console.log (days + ` ` + acresLeft)
+}
+
+console.log (`Days left: ` + days)
 
 // PROBLEM 4
 
@@ -135,12 +162,33 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
 
+// Yeah, I know it said I could use slice buuut... I feel like my way was easier. I avoided extra arrays and just pushed the final number into the given arrays. It stil isn't the most efficient probably but it works and I left it as it was.
 
+let tonsPerAcre = 6.5
+let t = 0
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
+for (let i = 0; i < fujiAcres.length; i++) {
+    t = fujiAcres[i] * tonsPerAcre
+    fujiTons.push (t)
+}
+
+for (let i = 0; i < galaAcres.length; i++) {
+    t = galaAcres[i] * tonsPerAcre
+    galaTons.push (t)
+}
+
+for (let i = 0; i < pinkAcres.length; i++) {
+    t = pinkAcres[i] * tonsPerAcre
+    pinkTons.push (t)
+}
+
+console.log (`Tons of Fuji Apples: ` + fujiTons)
+console.log (`Tons of Gala Apples: ` + galaTons)
+console.log (`Tons of Pink Apples: ` + pinkTons)
 
 
 
@@ -162,12 +210,33 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+
+
+// This one uses exactly the same loop I used in Problem 1, except it's tons now not acres and I had to separate them into different variables by variety. And yeah, a ton is actually more than 2000 pounds but since that's the value they give here, i just multiplied it by 2000 to get `pounds`.
 
 
 
+let totalTonsFuji = 0
+let totalTonsGala = 0
+let totalTonsPink = 0
+
+for (let i = 0; i < 7; i++) {
+    totalTonsFuji += fujiTons[i]
+    totalTonsGala += galaTons[i]
+    totalTonsPink += pinkTons[i]
+}
+
+// console.log (totalTonsFuji)
+// console.log (totalTonsGala)
+// console.log (totalTonsPink)
+
+let fujiPounds = totalTonsFuji * 2000
+let galaPounds = totalTonsGala * 2000
+let pinkPounds = totalTonsPink * 2000
+
+console.log (`Pounds of Fuji Apples: ` + fujiPounds)
+console.log (`Pounds of gala Apples: ` + galaPounds)
+console.log (`Pounds of Pink Apples: ` + pinkPounds)
 
 
 
@@ -189,11 +258,17 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+
+// Was that actually so easy or have I messed up somewhere and didn't understand the task? ^__^''' Obviously you multiply number of pounds by the price per pound... and you get a profit number. Unless you're an actual accountant and have a whole list of thing to consider before calling profits. :)
 
 
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * fujiPrice
+let pinkProfit = pinkPounds * pinkPrice
+
+console.log (`Fuji Apples Profit: ` + fujiProfit)
+console.log (`Gala Apples Profit: ` + galaProfit)
+console.log (`Pink Apples Profit: ` + pinkProfit)
 
 
 
@@ -209,3 +284,9 @@ let days = 0
 */
 
 // CODE HERE
+
+// Ahem. Well. Here's my meaningful comment. You, guys, rock! I'm enjoying the course and this is just total profit that consists of adding all the profits together. Is it meaningful enough? :)
+
+totalProfit = fujiProfit + galaProfit + pinkProfit
+
+console.log (`Total Profit: ` + totalProfit)
