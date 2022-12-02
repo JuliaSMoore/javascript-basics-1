@@ -89,4 +89,4 @@ let gitCommitCode = `git commit -m "initial commit"`
 
 //CODE HERE
 
-gitPushDefinition = `This command pushes a local copy of a repo to GitHub.`
+let gitPushDefinition = `This command pushes a local copy of a repo to GitHub.`
