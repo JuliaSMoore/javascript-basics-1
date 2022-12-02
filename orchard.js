@@ -81,10 +81,9 @@ console.log (`Total Acres: `+ totalAcres)
 
 
 
-
 // That was a pretty easy one, I'm not sure what to comment. The average formula is m = sum of terms/number of terms. So I diveded totalAcres by 7 days of the week, that's our daily average.
 
-averageDailyAcres = totalAcres / 7
+let averageDailyAcres = totalAcres / 7
 
 console.log (`Average Daily Acres: `+ averageDailyAcres)
 
@@ -263,7 +262,7 @@ console.log (`Pounds of Pink Apples: ` + pinkPounds)
 
 
 let fujiProfit = fujiPounds * fujiPrice
-let galaProfit = galaPounds * fujiPrice
+let galaProfit = galaPounds * galaPrice
 let pinkProfit = pinkPounds * pinkPrice
 
 console.log (`Fuji Apples Profit: ` + fujiProfit)
