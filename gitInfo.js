@@ -66,6 +66,8 @@ let gitStatusDefinition = `This command gives information about the current repo
 
 let gitAddDefinition = `This command adds specific files or a whole repo to be tracked.`
 
+let gitAddCode = `git add .`
+
 //////////////////PROBLEM 7////////////////////
 /*
     Create a variable called 'gitCommitDefinition'.  
