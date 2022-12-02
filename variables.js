@@ -3,21 +3,21 @@
 
 //CODE HERE 
 
-myName = `Julia`
+let myName = `Julia`
 
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
 //CODE HERE
 
-faveNum = 6
+let faveNum = 6
 
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
 
 //CODE HERE
 
-lovesCode = true
+let lovesCode = true
 
 //////////////////PROBLEM 4////////////////////
 /*
